@@ -28,7 +28,7 @@ while not win_state:
                 win_state = True
                 for wands in range(0, 9, 3):
                     print("|", playing_field[wands], "|", playing_field[wands + 1], "|", playing_field[wands + 2], "|")
-    if counter == 9:
+    if counter == 9 and not win_state:
         print("Ничья")
         win_state = True
 
