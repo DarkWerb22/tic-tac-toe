@@ -23,7 +23,8 @@ while not win_state:
     counter += 1
     if counter > 4:
         for coord in all_win_coords:
-            if playing_field[coord[0]-1] == playing_field[coord[1]-1] == playing_field[coord[2]-1]:
+            coord_1, coord_2, coord_3 = coord
+            if playing_field[coord_1-1] == playing_field[coord_2-1] == playing_field[coord_3-1]:
                 print("Выиграл игрок", symbol)
                 win_state = True
                 for wands in range(0, 9, 3):
